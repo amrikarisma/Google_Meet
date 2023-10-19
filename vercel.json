@@ -28,6 +28,10 @@
             "dest": "public/attachment/$1"
         },
         {
+            "src": "/socket.io/(.+)",
+            "dest": "socket.io/$1"
+        },
+        {
             "src": "/(.*)",
             "dest": "server.js"
         }
