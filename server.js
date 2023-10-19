@@ -11,7 +11,7 @@ const fileUpload = require("express-fileupload");
 const io = require("socket.io")(server, {
     allowEIO3: true
 });
-app.use(express.static(path.join(__dirname, "")));
+app.use(express.static(path.join(__dirname, "public")));
 
 var userConnection = [];
 io.on("connection", (socket) => {

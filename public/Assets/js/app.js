@@ -381,7 +381,7 @@ var MyApp = (function () {
                 hour12: true
             })
             var attachFileAreaForOther = document.querySelector(".show-attach-file");
-            attachFileAreaForOther.innerHTML += '<div class="left-align" style="display:flex;align-items:center;"><img src="public/assets/images/other.jpg" style="height:40px;" class="caller-image circle"><div style="font-weight:600;margin:0 5px;">' + data.username + '</div>:<div><a style="color:#007bff;" href="' + data.filePath + '" download>' + data.fileName + '</a></div></div><br />';
+            attachFileAreaForOther.innerHTML += '<div class="left-align" style="display:flex;align-items:center;"><img src="Assets/images/other.jpg" style="height:40px;" class="caller-image circle"><div style="font-weight:600;margin:0 5px;">' + data.username + '</div>:<div><a style="color:#007bff;" href="' + data.filePath + '" download>' + data.fileName + '</a></div></div><br />';
             $("label.custom-file-label").text("");
 
         })
@@ -418,7 +418,7 @@ var MyApp = (function () {
         newDivId.find("audio").attr("id", "a_" + connId);
         newDivId.show();
         $("#divUsers").append(newDivId);
-        $(".in-call-wrap-up").append(`<div class="in-call-wrap d-flex justify-content-between align-items-center mb-3" id="participant_${connId}"> <div class="participant-img-name-wrap display-center cursor-pointer"> <div class="participant-img"> <img src="public/Assets/images/other.jpg" alt="" class="border border-secondary" style="height: 40px;width: 40px;border-radius: 50%;"> </div> <div class="participant-name ml-2">${other_user_id}</div> </div> <div class="participant-action-wrap display-center"> <div class="participant-action-dot display-center mr-2 cursor-pointer"> <span class="material-icons"> more_vert </span> </div> <div class="participant-action-pin display-center mr-2 cursor-pointer"> <span class="material-icons"> push_pin </span> </div> </div> </div>`)
+        $(".in-call-wrap-up").append(`<div class="in-call-wrap d-flex justify-content-between align-items-center mb-3" id="participant_${connId}"> <div class="participant-img-name-wrap display-center cursor-pointer"> <div class="participant-img"> <img src="Assets/images/other.jpg" alt="" class="border border-secondary" style="height: 40px;width: 40px;border-radius: 50%;"> </div> <div class="participant-name ml-2">${other_user_id}</div> </div> <div class="participant-action-wrap display-center"> <div class="participant-action-dot display-center mr-2 cursor-pointer"> <span class="material-icons"> more_vert </span> </div> <div class="participant-action-pin display-center mr-2 cursor-pointer"> <span class="material-icons"> push_pin </span> </div> </div> </div>`)
         $(".participant-count").text(userNumber);
     }
 
@@ -537,7 +537,7 @@ var MyApp = (function () {
         var attachFileArea = document.querySelector(".show-attach-file");
         var attachFileName = $("#customFile").val().split("\\").pop();
         var attachFilePath = `public/attachment/${meeting_id}/${attachFileName}`;
-        attachFileArea.innerHTML += '<div class="left-align" style="display:flex;align-items:center;"><img src="public/assets/images/other.jpg" style="height:40px;" class="caller-image circle"><div style="font-weight:600;margin:0 5px;">' + user_id + '</div>:<div><a style="color:#007bff;" href="' + attachFilePath + '" download>' + attachFileName + '</a></div></div><br />';
+        attachFileArea.innerHTML += '<div class="left-align" style="display:flex;align-items:center;"><img src="Assets/images/other.jpg" style="height:40px;" class="caller-image circle"><div style="font-weight:600;margin:0 5px;">' + user_id + '</div>:<div><a style="color:#007bff;" href="' + attachFilePath + '" download>' + attachFileName + '</a></div></div><br />';
         $("label.custom-file-label").text("");
         socket.emit("fileTransferToOthers", {
             username: user_id,
