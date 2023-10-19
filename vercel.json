@@ -21,11 +21,11 @@
         },
         {
             "src": "/Assets/(.*)",
-            "dest": "public/Assets/"
+            "dest": "public/Assets/(.*)"
         },
         {
             "src": "/attachment/(.*)",
-            "dest": "public/attachment/"
+            "dest": "public/attachment/(.*)"
         },
         {
             "src": "/(.*)",
