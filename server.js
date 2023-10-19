@@ -112,3 +112,6 @@ app.post("/attach", function (req, res) {
     })
     return true;
 });
+
+module.exports = app;
+
