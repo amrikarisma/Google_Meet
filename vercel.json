@@ -12,6 +12,10 @@
         {
             "src": "*.js",
             "use": "@vercel/node"
+        },
+        {
+            "src": "public/**",
+            "use": "@vercel/static"
         }
     ],
     "routes": [
@@ -24,8 +28,8 @@
             "dest": "action.html"
         },
         {
-            "src": "/public/(.*)",
-            "dest": "public/(.*)"
+            "src": "public/**",
+            "dest": "/public/**"
         },
         {
             "src": "/(.*)",
