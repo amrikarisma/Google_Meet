@@ -165,17 +165,16 @@ var AppProcess = (function () {
 
     }
 
-    var iceConfiguration = {
-        iceServers: [
-            {
-                urls: "stun:stun.l.google.com:19302"
-            },
-            {
-                urls: "stun:stun.l.google.com:19302"
-            },
-        ]
-    }
-    function setConnection(connId) {
+
+
+    async function setConnection(connId) {
+
+        const response = await fetch("twilio-iceserver");
+        const twilio = await response.json();
+        const iceConfiguration = {
+            iceServers: twilio.iceServers
+        };
+
         var connection = new RTCPeerConnection(iceConfiguration)
         connection.onnegotiationneeded = async function (event) {
             await setOffer(connId);

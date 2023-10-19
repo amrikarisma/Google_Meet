@@ -113,5 +113,16 @@ app.post("/attach", function (req, res) {
     return true;
 });
 
+app.get('/twilio-iceserver', async (req, res) => {
+
+    const accountSid = process.env.TWILIO_ACCOUNT_SID;
+    const authToken = process.env.TWILIO_AUTH_TOKEN;
+    const client = require('twilio')(accountSid, authToken);
+
+    let token = await client.tokens.create();
+    res.send(token);
+
+});
+
 module.exports = app;
 
