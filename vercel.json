@@ -2,6 +2,10 @@
     "version": 2,
     "builds": [
         {
+            "src": "public/**",
+            "use": "@vercel/static"
+        },
+        {
             "src": "*.html",
             "use": "@vercel/static"
         },
@@ -12,10 +16,6 @@
         {
             "src": "*.js",
             "use": "@vercel/node"
-        },
-        {
-            "src": "public/**",
-            "use": "@vercel/static"
         }
     ],
     "routes": [
@@ -28,8 +28,8 @@
             "dest": "action.html"
         },
         {
-            "src": "public/**",
-            "dest": "/public/**"
+            "src": "public/Assets/js/app.js",
+            "dest": "/public/Assets/js/app.js"
         },
         {
             "src": "/(.*)",
