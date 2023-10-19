@@ -536,7 +536,7 @@ var MyApp = (function () {
 
         var attachFileArea = document.querySelector(".show-attach-file");
         var attachFileName = $("#customFile").val().split("\\").pop();
-        var attachFilePath = `public/attachment/${meeting_id}/${attachFileName}`;
+        var attachFilePath = `attachment/${meeting_id}/${attachFileName}`;
         attachFileArea.innerHTML += '<div class="left-align" style="display:flex;align-items:center;"><img src="Assets/images/other.jpg" style="height:40px;" class="caller-image circle"><div style="font-weight:600;margin:0 5px;">' + user_id + '</div>:<div><a style="color:#007bff;" href="' + attachFilePath + '" download>' + attachFileName + '</a></div></div><br />';
         $("label.custom-file-label").text("");
         socket.emit("fileTransferToOthers", {
