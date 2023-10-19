@@ -20,12 +20,12 @@
             "dest": "public/action.html"
         },
         {
-            "src": "/Assets/(.*)",
-            "dest": "public/Assets/(.*)"
+            "src": "/Assets/(.+)",
+            "dest": "public/Assets/$1"
         },
         {
-            "src": "/attachment/(.*)",
-            "dest": "public/attachment/(.*)"
+            "src": "/attachment/(.+)",
+            "dest": "public/attachment/$1"
         },
         {
             "src": "/(.*)",
