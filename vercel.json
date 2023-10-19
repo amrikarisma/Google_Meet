@@ -29,7 +29,7 @@
         },
         {
             "src": "/socket.io/(.+)",
-            "dest": "socket.io/$1"
+            "dest": "/socket.io/$1"
         },
         {
             "src": "/(.*)",
