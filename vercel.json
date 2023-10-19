@@ -20,10 +20,6 @@
             "dest": "action.html"
         },
         {
-            "src": "public/**",
-            "dest": "/public/**"
-        },
-        {
             "src": "/(.*)",
             "dest": "server.js"
         }
